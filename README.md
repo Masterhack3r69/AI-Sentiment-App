@@ -1,4 +1,4 @@
-# 🧠 AI Sentiment Analyzer (Full Stack)
+# 🧠 AI Sentiment Analyzer
 
 ![Project Status](https://img.shields.io/badge/Status-Active-success?style=flat-square)
 ![Tech Stack](https://img.shields.io/badge/Stack-React_|_FastAPI_|_PyTorch-blue?style=flat-square)
@@ -8,7 +8,7 @@ A modern full-stack application that analyzes the sentiment (Positive/Negative) 
 
 Unlike standard API wrappers, this project uses a **custom fine-tuned DistilBERT model** that I trained and deployed. The architecture is designed for efficiency: heavy model weights are offloaded to the Hugging Face Hub and fetched dynamically by the Python backend, keeping the local codebase lightweight.
 
-![alt text](client\src\assets\image.png)
+![alt text](client/src/assets/screenshot.png)
 
 ## 🏗️ Architecture
 
