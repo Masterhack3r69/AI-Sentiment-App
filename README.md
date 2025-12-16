@@ -1,56 +1,73 @@
-# 🧠 AI Sentiment Analyzer
+Here’s a cleaned-up, clear version of your README, plus a short description you can paste into the GitHub **About** section.
+
+---
+
+## 🧠 AI Sentiment Analyzer
 
 ![Project Status](https://img.shields.io/badge/Status-Active-success?style=flat-square)
 ![Tech Stack](https://img.shields.io/badge/Stack-React_|_FastAPI_|_PyTorch-blue?style=flat-square)
 ![Model](https://img.shields.io/badge/AI-DistilBERT-orange?style=flat-square)
 
-A modern full-stack application that analyzes the sentiment (Positive/Negative) of text in real-time.
+A full-stack web app that classifies text as **positive** or **negative** in real time using a custom fine-tuned DistilBERT model.
 
-Unlike standard API wrappers, this project uses a **custom fine-tuned DistilBERT model** that I trained and deployed. The architecture is designed for efficiency: heavy model weights are offloaded to the Hugging Face Hub and fetched dynamically by the Python backend, keeping the local codebase lightweight.
+This project does not rely on a third-party sentiment API. The model was trained, exported, and deployed by the developer. Model weights are hosted on Hugging Face and loaded dynamically by the backend to keep the repository small and easy to run.
 
-![alt text](client/src/assets/image.png)
+![App Screenshot](client/src/assets/image.png)
+
+---
 
 ## 🏗️ Architecture
 
-The app uses a **Hybrid Cloud Architecture**:
+The system follows a hybrid cloud setup:
 
-1.  **Frontend (React + Vite):** A responsive, type-safe UI built with TypeScript.
-2.  **Backend (FastAPI):** A high-performance Python API acting as the inference engine.
-3.  **AI Model (Hugging Face):** The backend automatically downloads and caches the model weights from the cloud, ensuring portable and consistent performance across different machines.
+1. **Frontend (React + Vite)**
+   A fast, responsive UI written in TypeScript.
+
+2. **Backend (FastAPI)**
+   A Python API that handles inference and model loading.
+
+3. **AI Model (Hugging Face Hub)**
+   The backend downloads and caches the trained DistilBERT weights on startup, allowing consistent results across environments.
+
+---
 
 ## 🛠️ Tech Stack
 
 ### Frontend
 
-- **Framework:** React (Vite)
-- **Language:** TypeScript
-- **Styling:** CSS Modules / Standard CSS
+* React (Vite)
+* TypeScript
+* CSS Modules / plain CSS
 
 ### Backend
 
-- **API:** FastAPI (Python 3.10+)
-- **Server:** Uvicorn
-- **ML Engine:** PyTorch, Transformers
-- **Model Source:** Hugging Face Hub
+* FastAPI (Python 3.10+)
+* Uvicorn
+* PyTorch
+* Transformers
+* Hugging Face Hub
+
+---
 
 ## 🚀 Getting Started
 
-Follow these instructions to run the project locally.
-
 ### Prerequisites
 
-- Node.js (v16 or higher)
-- Python (v3.9 or higher)
+* Node.js v16+
+* Python v3.9+
+
+---
 
 ### 1. Clone the Repository
 
 ```bash
 git clone <repository-url>
 cd AI-Sentiment-App
-
 ```
 
-###2. Setup the AI Backend
+---
+
+### 2. Set Up the Backend
 
 ```bash
 cd server
@@ -60,6 +77,7 @@ python -m venv venv
 
 # Activate (Windows)
 venv\Scripts\activate
+
 # Activate (Mac/Linux)
 # source venv/bin/activate
 
@@ -68,12 +86,17 @@ pip install fastapi uvicorn transformers torch
 
 # Start the API
 uvicorn api:app --reload
-
 ```
 
-_Wait until you see "✅ Model loaded!" in the terminal._
+Wait until the terminal shows:
 
-###3. Setup the Frontend
+```
+✅ Model loaded!
+```
+
+---
+
+### 3. Set Up the Frontend
 
 ```bash
 cd client
@@ -81,13 +104,23 @@ cd client
 # Install dependencies
 npm install
 
-# Start the UI
+# Start the development server
 npm run dev
-
 ```
 
-Open your browser to `http://localhost:5173`.
+Open your browser at:
+`http://localhost:5173`
 
-#Enjoy
+---
 
-![alt text](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMGIwc3J2eWlhZHB0bWhuNTI4b211MzI3ZmlpcmoyNHR6aW01cmhyZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/rMEJyjch7L1tlRlCl3/giphy.gif)
+## 🎯 Features
+
+* Real-time sentiment prediction
+* Custom fine-tuned DistilBERT model
+* Clean API separation between UI and ML logic
+* Lightweight repository with cloud-hosted model weights
+
+---
+
+![Demo GIF](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMGIwc3J2eWlhZHB0bWhuNTI4b211MzI3ZmlpcmoyNHR6aW01cmhyZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/rMEJyjch7L1tlRlCl3/giphy.gif)
+
