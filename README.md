@@ -1,7 +1,3 @@
-Here’s a cleaned-up, clear version of your README, plus a short description you can paste into the GitHub **About** section.
-
----
-
 ## 🧠 AI Sentiment Analyzer
 
 ![Project Status](https://img.shields.io/badge/Status-Active-success?style=flat-square)
