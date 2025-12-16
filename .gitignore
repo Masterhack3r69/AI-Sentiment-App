@@ -10,3 +10,4 @@ __pycache__/
 # Large Models (Just in case)
 *.bin
 *.safetensors
+server/model/
